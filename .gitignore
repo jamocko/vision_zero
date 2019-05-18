@@ -17,6 +17,11 @@
 # RStudio files
 .Rproj.user/
 
+# Remove .DS_Stores
+.DS_Store
+data/.DS_Store
+data/crash_data/.DS_Store
+
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
