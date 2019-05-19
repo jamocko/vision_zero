@@ -15,12 +15,15 @@ import {
     Segment,
     Sidebar,
     Visibility,
+    Transition,
 } from 'semantic-ui-react'
 import upturnedCar from '../images/upturnedCar.jpeg';
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
 // For more advanced usage please check Responsive docs under the "Usage" section.
+
+// Get width of screen
 const getWidth = () => {
     const isSSR = typeof window === 'undefined'
 
@@ -31,6 +34,7 @@ const getWidth = () => {
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+
 const HomepageHeading = ({mobile}) => (
     <Container text>
         <Header
