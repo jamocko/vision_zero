@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types'
-import React, {Component} from 'react'
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {
     Button,
     Container,
-    Divider,
     Grid,
     Header,
     Icon,
@@ -15,7 +14,6 @@ import {
     Segment,
     Sidebar,
     Visibility,
-    Transition,
 } from 'semantic-ui-react'
 import upturnedCar from '../images/upturnedCar.jpeg';
 
@@ -25,10 +23,10 @@ import upturnedCar from '../images/upturnedCar.jpeg';
 
 // Get width of screen
 const getWidth = () => {
-    const isSSR = typeof window === 'undefined'
+    const isSSR = typeof window === 'undefined';
 
     return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
-}
+};
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -63,25 +61,25 @@ const HomepageHeading = ({mobile}) => (
             <Icon name='right arrow' />
         </Button>*/}
     </Container>
-)
+);
 
 HomepageHeading.propTypes = {
     mobile: PropTypes.bool,
-}
+};
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-    state = {}
+    state = {};
 
-    hideFixedMenu = () => this.setState({fixed: false})
-    showFixedMenu = () => this.setState({fixed: true})
+    hideFixedMenu = () => this.setState({fixed: false});
+    showFixedMenu = () => this.setState({fixed: true});
 
     render() {
-        const {children} = this.props
-        const {fixed} = this.state
+        const {children} = this.props;
+        const {fixed} = this.state;
 
         return (
             <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
@@ -137,18 +135,18 @@ class DesktopContainer extends Component {
 
 DesktopContainer.propTypes = {
     children: PropTypes.node,
-}
+};
 
 class MobileContainer extends Component {
-    state = {}
+    state = {};
 
-    handleSidebarHide = () => this.setState({sidebarOpened: false})
+    handleSidebarHide = () => this.setState({sidebarOpened: false});
 
-    handleToggle = () => this.setState({sidebarOpened: true})
+    handleToggle = () => this.setState({sidebarOpened: true});
 
     render() {
-        const {children} = this.props
-        const {sidebarOpened} = this.state
+        const {children} = this.props;
+        const {sidebarOpened} = this.state;
 
         return (
             <Responsive
@@ -208,18 +206,18 @@ class MobileContainer extends Component {
 
 MobileContainer.propTypes = {
     children: PropTypes.node,
-}
+};
 
 const ResponsiveContainer = ({children}) => (
     <div>
         <DesktopContainer>{children}</DesktopContainer>
         <MobileContainer>{children}</MobileContainer>
     </div>
-)
+);
 
 ResponsiveContainer.propTypes = {
     children: PropTypes.node,
-}
+};
 
 const HomepageLayout = () => (
     <ResponsiveContainer>
@@ -395,6 +393,6 @@ const HomepageLayout = () => (
             </Container>
         </Segment>
     </ResponsiveContainer>
-)
+);
 
 export default HomepageLayout
