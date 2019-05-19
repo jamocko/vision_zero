@@ -112,7 +112,12 @@ class DesktopContainer extends Component {
                                         Product
                                     </Link>
                                 </Menu.Item>
-                                <Menu.Item as='a'>About Us</Menu.Item>
+
+                                <Menu.Item as='a'>
+                                    <Link to='/OurTeam'>
+                                    Our Team
+                                    </Link>
+                                </Menu.Item>
                                 {/*<Menu.Item position='right'>
                                     <Button as='a' inverted={!fixed}>
                                         Log in
@@ -264,7 +269,7 @@ const HomepageLayout = () => (
                 <Grid.Row>
                     <Grid.Column textAlign='center'>
                         <Link to="/Product">
-                        <Button size='huge' color='black'>Our Product<Icon name='right arrow'/></Button>
+                        <Button size='huge' color='blue'>Our Product<Icon name='right arrow'/></Button>
                         </Link>
                     </Grid.Column>
                 </Grid.Row>
@@ -322,31 +327,55 @@ const HomepageLayout = () => (
                 <Grid columns={3} divided>
                     <Grid.Row>
                         <Grid.Column>
-                            <Image src={upturnedCar}/>
-                            237 were fatal accidents, claiming 245 lives
+                            <div align="center" style={{padding: '1em 0em'}}>
+                            <Icon circular name='chart bar' size='big' inverted color='blue'/>
+                            <div style={{padding: '2em 0em'}}>
+                            <strong>237 were fatal accidents, claiming 245 lives</strong>
+                            </div>
+                            </div>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image src={upturnedCar}/>
-                            5,397 were classified as injury accidents, leaving 7,326 people injured
+                            <div align="center" style={{padding: '1em 0em'}}>
+                            <Icon circular name='medkit' size='big' inverted color='blue'/>
+                                <div style={{padding: '2em 0em'}}>
+                            <strong>5,397 were classified as injury accidents, leaving 7,326 people injured</strong>
+                                </div>
+                            </div>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image src={upturnedCar}/>
-                            43,027 were non-injury accidents
+                            <div align="center" style={{padding: '1em 0em'}}>
+                            <Icon circular name='heartbeat' size='big' inverted color='blue'/>
+                                <div style={{padding: '2em 0em'}}>
+                            <strong>43,027 were non-injury accidents</strong>
+                                </div>
+                            </div>
                         </Grid.Column>
                     </Grid.Row>
 
                     <Grid.Row>
                         <Grid.Column>
-                            <Image src={upturnedCar}/>
-                            1,118 were serious injury accidents, leaving 1,304 people seriously injured
+                            <div align="center" style={{padding: '1em 0em'}}>
+                            <Icon circular name='ambulance' size='big' inverted color='blue'/>
+                                <div style={{padding: '2em 0em'}}>
+                            <strong>1,118 were serious injury accidents, leaving 1,304 people seriously injured</strong>
+                                </div>
+                            </div>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image src={upturnedCar}/>
-                            23,385 accidents with possible injuries
+                            <div align="center" style={{padding: '1em 0em'}}>
+                            <Icon circular name='user md' size='big' inverted color='blue'/>
+                            <div style={{padding: '2em 0em'}}>
+                            <strong>23,385 accidents with possible injuries</strong>
+                            </div>
+                            </div>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image src={upturnedCar}/>
-                            2,630 were classified as "unknown severity"
+                            <div align="center" style={{padding: '2em 0em'}}>
+                            <Icon circular name='question circle outline' size='big' inverted color='blue'/>
+                                <div style={{padding: '1em 0em'}}>
+                            <strong>2,630 were classified as "unknown severity"</strong>
+                                </div>
+                            </div>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
