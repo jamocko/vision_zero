@@ -370,9 +370,9 @@ const HomepageLayout = () => (
                             </div>
                         </Grid.Column>
                         <Grid.Column>
-                            <div align="center" style={{padding: '2em 0em'}}>
+                            <div align="center" style={{padding: '1em 0em'}}>
                             <Icon circular name='question circle outline' size='big' inverted color='blue'/>
-                                <div style={{padding: '1em 0em'}}>
+                                <div style={{padding: '2em 0em'}}>
                             <strong>2,630 were classified as "unknown severity"</strong>
                                 </div>
                             </div>
@@ -380,7 +380,7 @@ const HomepageLayout = () => (
                     </Grid.Row>
                 </Grid>
                 {/*<Button as='a' size='large'>
-                    I'm Still Quite Interested
+                    I'm Still Quite Intefasfsdfsadfsagdrested
                 </Button>*/}
             </Container>
         </Segment>

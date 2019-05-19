@@ -6,7 +6,7 @@ import crashRiskMap from '../images/placeholderHoustonMap.png';
 const ProductPage = () => (
     <div>
         <LightHeader/>
-        <h1 align="center">High Crash Risk Map </h1>
+        <h1 align="center">Map of Severe Crashes</h1>
         <Container>
         {/*Code for the heatmap*/}
         <iframe srcDoc='
